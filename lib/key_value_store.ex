@@ -1,6 +1,6 @@
 defmodule Kv do
   @moduledoc """
-  Key-Value store naïve implementation
+  Key-Value store naive implementation
   """
 
   use GenServer
@@ -21,7 +21,7 @@ defmodule Kv do
   Returns the whole storage
 
   ## Tests
-  
+
       iex> with {:ok, pid} <- Kv.start_link(), :ok <- Kv.put(pid, :foo, 42), do: Kv.get(pid, :foo)
       42
   """

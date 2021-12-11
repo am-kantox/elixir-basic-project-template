@@ -1,4 +1,6 @@
 defmodule Kv.Behaviour do
+  @moduledoc false
+
   @doc """
   Returns the state
   """
