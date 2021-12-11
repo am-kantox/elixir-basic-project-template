@@ -1,6 +1,6 @@
 defmodule Kv do
   @moduledoc """
-  Key-Value store naive implementation
+  Key-Value store naïve implementation
   """
 
   use GenServer
