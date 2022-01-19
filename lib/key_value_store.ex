@@ -21,12 +21,16 @@ defmodule Kv do
   Returns the whole storage
 
   ## Tests
-  
+
       iex> with {:ok, pid} <- Kv.start_link(), :ok <- Kv.put(pid, :foo, 42), do: Kv.get(pid, :foo)
       42
   """
   @impl Kv.Behaviour
   def state(name), do: GenServer.call(name, :state)
+
+  @spec put_default(GenServer.name(), Kv.Behaviour.value()) :: :ok
+  def put_default(name, value),
+    do: put(name, "default", value)
 
   @doc """
   Puts the value to the storage
