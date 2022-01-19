@@ -1,4 +1,6 @@
 defmodule Kv.Behaviour do
+  @moduledoc "Behaviour"
+
   @version "1.0.0"
 
   @type key :: atom()
