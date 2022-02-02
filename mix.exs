@@ -20,6 +20,7 @@ defmodule KeyValueStore.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {Kv.Application, []},
       extra_applications: [:logger]
     ]
   end
@@ -27,6 +28,7 @@ defmodule KeyValueStore.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:observer_cli, "~> 1.1", only: :dev},
       {:ex_doc, "~> 0.25", only: :dev, runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false}
